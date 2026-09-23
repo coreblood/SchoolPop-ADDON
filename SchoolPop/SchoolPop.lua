@@ -174,9 +174,9 @@ local function GetSchoolInfo(mask)
 end
 
 --================= NUMBER FORMAT & ICON LOOKUP ===================
--- Abbreviate at each 1000x threshold: K, M, B, T, Qa, Qi.
+-- Abbreviate at each 1000x threshold: K, M, B, T, Qa, Qi, S.
 local NUM_SUFFIX = {
-    { 1e18, "Qi" }, { 1e15, "Qa" }, { 1e12, "T" }, { 1e9, "B" }, { 1e6, "M" },
+    { 1e21, "S" }, { 1e18, "Qi" }, { 1e15, "Qa" }, { 1e12, "T" }, { 1e9, "B" }, { 1e6, "M" },
 }
 local function FormatNumber(n)
     if not db.shortNums or n < 1000 then return tostring(n) end
